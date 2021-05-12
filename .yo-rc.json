@@ -41,6 +41,9 @@
     "packageFolder": "com/umi/app",
     "jwtSecretKey": "MjYwNzk0MjkwOWUwMWQ5NDcxMmZiOWRhZmViYTFlMGI0OTFlMTlhOWU1NGExNGIyNDVmOWJlNzJiZjRlMzRlZjdiMGUzMDYyZTUyNzliN2FiY2JlNmM3OTlhNTg4NWNhNzViMTVmOWUwYzljMTAzZGEyODAwNGM2YzEyMTQ3ZTU=",
     "clientPackageManager": "npm",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "herokuAppName": "tracabilite-umi",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "11"
   }
 }
