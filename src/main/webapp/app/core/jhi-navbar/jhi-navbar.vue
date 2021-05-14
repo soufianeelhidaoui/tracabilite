@@ -1,8 +1,8 @@
 <template>
-  <b-navbar data-cy="navbar" toggleable="md" type="dark" class="bg-primary">
+  <b-navbar data-cy="navbar" toggleable="md" type="light" class="bg-light">
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
-      <span class="navbar-title">tracabilite</span> <span class="navbar-version">{{ version }}</span>
+      <h1 class="navbar-title"><em>Dossier</em><strong>Facile</strong>.ma</h1>
     </b-navbar-brand>
     <b-navbar-toggle
       right
@@ -21,13 +21,13 @@
         <b-nav-item to="/" exact>
           <span>
             <font-awesome-icon icon="home" />
-            <span>Home</span>
+            <span>Acceuil</span>
           </span>
         </b-nav-item>
         <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
           <span slot="button-content" class="navbar-dropdown-menu">
             <font-awesome-icon icon="th-list" />
-            <span class="no-bold">Entities</span>
+            <span class="no-bold">Entités</span>
           </span>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
@@ -46,7 +46,7 @@
           </span>
           <b-dropdown-item to="/admin/user-management" active-class="active">
             <font-awesome-icon icon="users" />
-            <span>User management</span>
+            <span>Gestion des utilisateurs</span>
           </b-dropdown-item>
           <b-dropdown-item to="/admin/metrics" active-class="active">
             <font-awesome-icon icon="tachometer-alt" />
@@ -70,7 +70,7 @@
           </b-dropdown-item>
           <b-dropdown-item v-if="!inProduction" href="./h2-console/" target="_tab">
             <font-awesome-icon icon="database" />
-            <span>Database</span>
+            <span>Base de données</span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown
@@ -84,23 +84,23 @@
         >
           <span slot="button-content" class="navbar-dropdown-menu">
             <font-awesome-icon icon="user" />
-            <span class="no-bold"> Account </span>
+            <span class="no-bold"> Mon compte </span>
           </span>
           <b-dropdown-item data-cy="settings" to="/account/settings" tag="b-dropdown-item" v-if="authenticated" active-class="active">
             <font-awesome-icon icon="wrench" />
-            <span>Settings</span>
+            <span>Paramètres</span>
           </b-dropdown-item>
           <b-dropdown-item data-cy="passwordItem" to="/account/password" tag="b-dropdown-item" v-if="authenticated" active-class="active">
             <font-awesome-icon icon="lock" />
-            <span>Password</span>
+            <span>Mot de passe</span>
           </b-dropdown-item>
           <b-dropdown-item data-cy="logout" v-if="authenticated" v-on:click="logout()" id="logout" active-class="active">
             <font-awesome-icon icon="sign-out-alt" />
-            <span>Sign out</span>
+            <span>Me déconnecter</span>
           </b-dropdown-item>
           <b-dropdown-item data-cy="login" v-if="!authenticated" v-on:click="openLogin()" id="login" active-class="active">
             <font-awesome-icon icon="sign-in-alt" />
-            <span>Sign in</span>
+            <span>Me connecter</span>
           </b-dropdown-item>
           <b-dropdown-item
             data-cy="register"
@@ -111,7 +111,7 @@
             active-class="active"
           >
             <font-awesome-icon icon="user-plus" />
-            <span>Register</span>
+            <span>Créer un compte</span>
           </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
@@ -155,10 +155,10 @@
 }
 
 .logo .logo-img {
-  height: 45px;
+  height: 85px;
   display: inline-block;
   vertical-align: middle;
-  width: 70px;
+  width: 80px;
 }
 
 .logo-img {

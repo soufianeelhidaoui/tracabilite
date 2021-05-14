@@ -1,6 +1,6 @@
 <template>
   <div id="footer" class="footer">
-    <p>This is your footer</p>
+    <p class="text-center">{{ new Date().getFullYear() }} — <strong>DossierFacile.ma</strong></p>
   </div>
 </template>
 

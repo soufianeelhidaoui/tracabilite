@@ -20,6 +20,11 @@ import RegisterService from './account/register/register.service';
 import UserManagementService from '@/admin/user-management/user-management.service';
 import LoginService from './account/login.service';
 import AccountService from './account/account.service';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+
+// Import Bootstrap an BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 import '../content/scss/vendor.scss';
 
@@ -35,10 +40,13 @@ config.initFortAwesome(Vue);
 bootstrapVueConfig.initBootstrapVue(Vue);
 Vue.use(Vue2Filters);
 Vue.use(ToastPlugin);
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('jhi-item-count', JhiItemCountComponent);
 Vue.component('jhi-sort-indicator', JhiSortIndicatorComponent);
 Vue.component('infinite-loading', InfiniteLoading);
+
 const store = config.initVueXStore(Vue);
 
 const loginService = new LoginService();
